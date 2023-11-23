@@ -1,0 +1,73 @@
+﻿@page
+@model RegisterModel
+@{
+}
+<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <div class="container">
+        <img src="~/Images/CompanyLogo.png" height="100" />
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+            <ul class="navbar-nav flex-grow-1">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<h1>Register</h1>
+
+<form method="post">
+    <div class="registerdiv">
+
+        <label>First Name:</label><br>
+        <input type="text" id="firstname" name="firstname"><br>
+        <br />
+    
+        <label>Last Name:</label><br>
+        <input type="text" id="lastname" name="lastname"><br>
+        <br />
+    
+        <label>Age:</label><br>
+        <input type="text" id="age" name="age"><br>
+        <br />
+    
+        <label>Instrument Preference</label><br>
+        <input type="text" id="instrument" name="instrument"><br>
+        <br />
+    
+        <label>Skill Level</label><br>
+
+        <select name="skilllevel" id="skilllevel">
+            <option value="Fundamentals">Fundamentals</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+            <option value="Expert">Expert</option>
+        </select>
+        <br />
+        <br />
+        <label>Phone Number</label><br>
+        <input type="text" id="phonenumber" name="phonenumber"><br>
+        <br />
+
+        <label>Email</label><br>
+        <input type="email" id="email" name="email"><br>
+        <br />
+
+        <label>Password:</label><br>
+        <input type="password" id="password" name="password">
+        <div> Error message for password</div>
+        <br>
+        <br>
+        <button type="submit" value="Submit" class="button button">Submit</button>
+        <button type="reset" value="Clear" class="button buttonclear">Clear</button>
+    </div>
+</form>

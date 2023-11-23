@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Your Music Depot.props" />
+</Project>

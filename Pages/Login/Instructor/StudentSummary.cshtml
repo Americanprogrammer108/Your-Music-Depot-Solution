@@ -1,0 +1,67 @@
+﻿@page
+@model Your_Music_Depot_Application_DBAS6201.Pages.Login.Instructor.StudentSummaryModel
+@{
+}
+<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <div class="container">
+        <p class="navbar-brand" asp-area="" asp-page="/Index">Vintage Boat Association of Ontario</p>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+            <ul class="navbar-nav flex-grow-1">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Login/Student/Dashboard">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Login/Student/Instructors">Instructors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Login/Student/Scheduling">Scheduling</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Login/Student/Finance">Finance</a>
+                </li>
+            </ul>
+        </div>
+
+        
+    </div>
+</nav>
+
+<h1>Students</h1>
+
+<form method="post">
+    <label>Search student by name or instrument</label>
+    <input type="text" id="nameORinstrument" name="nameORinstrument" />
+
+    <button type="submit" value="Submit">Search</button>
+    <button type="reset" value="Clear">Clear</button>
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Instrument</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+        </tr>
+
+    </thead>
+    @foreach (var item in Model.Students)
+    {
+        <tbody>
+            <tr>
+                <td>@item.FName @item.LName</td>
+                <td>@item.Instrument</td>
+                <td>@item.Email</td>
+                <td>@item.PhoneNumber</td>
+            </tr>
+
+        </tbody>
+    }
+
+
+</table>
